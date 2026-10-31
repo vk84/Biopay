@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Registration – BioPay</title>
+  <meta name="description" content="Register your business on BioPay to accept biometric fingerprint payments from customers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-animated">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="url(#lg2)" stroke-width="2"/><path d="M20 8C13.4 8 8 13.4 8 20s5.4 12 12 12 12-5.4 12-12" stroke="url(#lg2)" stroke-width="2" stroke-linecap="round"/><path d="M20 12c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8" stroke="url(#lg2)" stroke-width="2" stroke-linecap="round"/><path d="M20 16c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4" stroke="url(#lg2)" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="2" fill="url(#lg2)"/><defs><linearGradient id="lg2" x1="8" y1="8" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs></svg>
+        </div>
+        <span class="logo-text">Bio<span class="logo-accent">Pay</span></span>
+      </a>
+      <div style="margin-left:auto; display:flex; gap:12px; align-items:center;">
+        <a href="register-customer.html" class="btn btn-ghost">Customer Registration</a>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="form-page">
+    <div class="form-card form-card-wide" id="vendorRegistrationCard">
+
+      <!-- Progress Steps -->
+      <div class="form-steps">
+        <div class="form-step active" id="vStep1Indicator">
+          <div class="step-dot">1</div>
+          <div class="step-label">Business Info</div>
+        </div>
+        <div class="step-line" id="vLine1"></div>
+        <div class="form-step" id="vStep2Indicator">
+          <div class="step-dot">2</div>
+          <div class="step-label">Bank & Plan</div>
+        </div>
+        <div class="step-line" id="vLine2"></div>
+        <div class="form-step" id="vStep3Indicator">
+          <div class="step-dot">3</div>
+          <div class="step-label">Security</div>
+        </div>
+      </div>
+
+      <!-- Step 1: Business Info -->
+      <div id="vFormStep1">
+        <div class="form-header">
+          <div class="form-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="20" width="36" height="22" rx="3" stroke="url(#vGrad)" stroke-width="2.5"/><path d="M14 20v-4a10 10 0 0 1 20 0v4" stroke="url(#vGrad)" stroke-width="2.5" stroke-linecap="round"/><path d="M24 30v4" stroke="url(#vGrad)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="vGrad" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs></svg>
+          </div>
+          <h1>Vendor Registration</h1>
+          <p>Start accepting biometric payments at your business today.</p>
+        </div>
+
+        <div class="form-section-title">Business Information</div>
+
+        <div class="form-group">
+          <label for="vBusinessName">Business / Shop Name</label>
+          <div class="input-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <input type="text" id="vBusinessName" placeholder="e.g. Sharma General Store" />
+          </div>
+          <span class="field-error" id="vBusinessNameError">Please enter your business name</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vBusinessType">Business Category</label>
+            <select id="vBusinessType">
+              <option value="">Select Category</option>
+              <option>Retail / General Store</option>
+              <option>Restaurant / Food & Beverage</option>
+              <option>Healthcare / Pharmacy</option>
+              <option>Education</option>
+              <option>Petrol / Fuel Station</option>
+              <option>Grocery / Supermarket</option>
+              <option>Electronics</option>
+              <option>Clothing & Fashion</option>
+              <option>Transport / Logistics</option>
+              <option>Services</option>
+              <option>Other</option>
+            </select>
+            <span class="field-error" id="vBusinessTypeError">Please select a business category</span>
+          </div>
+          <div class="form-group">
+            <label for="vRegistrationNumber">Business Registration No.</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <input type="text" id="vRegistrationNumber" placeholder="CIN/Shop License No." />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="vGstin">GSTIN Number</label>
+          <div class="input-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            <input type="text" id="vGstin" placeholder="22AAAAA0000A1Z5" maxlength="15" style="text-transform:uppercase;" />
+          </div>
+          <span class="field-error" id="vGstinError">Please enter a valid 15-digit GSTIN</span>
+        </div>
+
+        <div class="form-group">
+          <label for="vBusinessAddress">Business Address</label>
+          <textarea id="vBusinessAddress" rows="2" placeholder="Full business address including PIN code..." style="resize:vertical;"></textarea>
+          <span class="field-error" id="vBusinessAddressError">Please enter your business address</span>
+        </div>
+
+        <div class="form-section-title" style="margin-top:24px;">Owner / Contact Details</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vOwnerName">Owner / Authorized Person Name</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <input type="text" id="vOwnerName" placeholder="Full Name" />
+            </div>
+            <span class="field-error" id="vOwnerNameError">Please enter the owner's name</span>
+          </div>
+          <div class="form-group">
+            <label for="vPhone">Business Phone</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+              <input type="tel" id="vPhone" placeholder="+91 98765 43210" />
+            </div>
+            <span class="field-error" id="vPhoneError">Please enter a valid phone number</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="vEmail">Business Email</label>
+          <div class="input-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <input type="email" id="vEmail" placeholder="business@example.com" />
+          </div>
+          <span class="field-error" id="vEmailError">Please enter a valid email address</span>
+        </div>
+
+        <button class="btn btn-primary w-full btn-large" onclick="vGoToStep2()" style="margin-top:8px;">
+          Continue to Bank & Plan
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="form-footer">
+          Already registered? <a href="login.html">Login here</a> | <a href="register-customer.html">Customer registration</a>
+        </div>
+      </div>
+
+      <!-- Step 2: Bank & Plan -->
+      <div id="vFormStep2" style="display:none;">
+        <div class="form-header">
+          <div class="form-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="24" rx="4" stroke="url(#vbGrad)" stroke-width="2.5"/><path d="M6 22h36M16 30h4M26 30h6" stroke="url(#vbGrad)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="vbGrad" x1="6" y1="14" x2="42" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs></svg>
+          </div>
+          <h1>Bank Account & Plan</h1>
+          <p>Where should we send your payments? Choose your plan.</p>
+        </div>
+
+        <div class="form-section-title">Settlement Bank Account</div>
+
+        <div class="form-group">
+          <label for="vBankName">Bank Name</label>
+          <select id="vBankName">
+            <option value="">Select Your Bank</option>
+            <option>State Bank of India (SBI)</option>
+            <option>HDFC Bank</option>
+            <option>ICICI Bank</option>
+            <option>Axis Bank</option>
+            <option>Kotak Mahindra Bank</option>
+            <option>Punjab National Bank (PNB)</option>
+            <option>Bank of Baroda</option>
+            <option>Canara Bank</option>
+            <option>Union Bank of India</option>
+            <option>IndusInd Bank</option>
+            <option>Other</option>
+          </select>
+          <span class="field-error" id="vBankNameError">Please select your bank</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vAccountNumber">Account Number</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+              <input type="text" id="vAccountNumber" placeholder="Account number" />
+            </div>
+            <span class="field-error" id="vAccountNumberError">Please enter account number</span>
+          </div>
+          <div class="form-group">
+            <label for="vIfsc">IFSC Code</label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <input type="text" id="vIfsc" placeholder="HDFC0001234" maxlength="11" style="text-transform:uppercase;" />
+            </div>
+            <span class="field-error" id="vIfscError">Please enter valid IFSC code</span>
+          </div>
+        </div>
+
+        <div class="form-section-title" style="margin-top:24px;">Choose Your Plan</div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+          <label class="plan-option" id="planStarter">
+            <input type="radio" name="plan" value="starter" id="radioStarter" onchange="selectPlan('starter')" />
+            <div class="plan-content">
+              <div style="font-size:13px; font-weight:700; color:var(--primary-light); margin-bottom:4px;">STARTER</div>
+              <div style="font-family:var(--font-display); font-size:26px; font-weight:800; letter-spacing:-1px;">₹499<span style="font-size:13px; font-weight:500; color:var(--text-muted)">/mo</span></div>
+              <ul style="list-style:none; margin-top:12px; display:flex; flex-direction:column; gap:6px;">
+                <li style="font-size:12px; color:var(--text-secondary);">✓ 1 Terminal</li>
+                <li style="font-size:12px; color:var(--text-secondary);">✓ 0.5% per transaction</li>
+                <li style="font-size:12px; color:var(--text-secondary);">✓ Daily settlements</li>
+              </ul>
+            </div>
+          </label>
+          <label class="plan-option" id="planBusiness">
+            <input type="radio" name="plan" value="business" id="radioBusiness" onchange="selectPlan('business')" />
+            <div class="plan-content">
+              <div style="font-size:13px; font-weight:700; color:var(--primary-light); margin-bottom:4px;">BUSINESS ⭐</div>
+              <div style="font-family:var(--font-display); font-size:26px; font-weight:800; letter-spacing:-1px;">₹1,999<span style="font-size:13px; font-weight:500; color:var(--text-muted)">/mo</span></div>
+              <ul style="list-style:none; margin-top:12px; display:flex; flex-direction:column; gap:6px;">
+                <li style="font-size:12px; color:var(--text-secondary);">✓ 5 Terminals</li>
+                <li style="font-size:12px; color:var(--text-secondary);">✓ 0.3% per transaction</li>
+                <li style="font-size:12px; color:var(--text-secondary);">✓ Instant settlements</li>
+              </ul>
+            </div>
+          </label>
+        </div>
+        <span class="field-error" id="planError" style="display:none; margin-bottom:16px;">Please select a plan</span>
+
+        <div style="display:flex; gap:12px;">
+          <button class="btn btn-ghost btn-large" onclick="vGoToStep1()" style="flex:1;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn btn-primary btn-large" onclick="vGoToStep3()" style="flex:2;">
+            Continue to Security
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Security -->
+      <div id="vFormStep3" style="display:none;">
+        <div class="form-header">
+          <div class="form-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6L8 14v12c0 10 7.2 19.4 16 22 8.8-2.6 16-12 16-22V14L24 6z" stroke="url(#vsGrad)" stroke-width="2.5"/><path d="M18 24l4 4 8-8" stroke="url(#vsGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="vsGrad" x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs></svg>
+          </div>
+          <h1>Secure Your Account</h1>
+          <p>Set strong credentials for your BioPay vendor account.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="vPassword">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="vPassword" placeholder="Create a strong password" />
+            <button type="button" class="password-toggle" onclick="togglePassword('vPassword', this)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="vPasswordError">Password must be at least 8 characters</span>
+        </div>
+
+        <div class="form-group">
+          <label for="vConfirmPassword">Confirm Password</label>
+          <div class="password-wrap">
+            <input type="password" id="vConfirmPassword" placeholder="Re-enter your password" />
+            <button type="button" class="password-toggle" onclick="togglePassword('vConfirmPassword', this)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="vConfirmPasswordError">Passwords do not match</span>
+        </div>
+
+        <div class="form-group" style="margin-top:8px;">
+          <label class="checkbox-group">
+            <input type="checkbox" id="vTermsCheck" />
+            <span>I agree to BioPay's <a href="#">Terms of Service</a>, <a href="#">Vendor Agreement</a>, and <a href="#">Privacy Policy</a>. I confirm this business information is accurate.</span>
+          </label>
+          <span class="field-error" id="vTermsError">Please accept the terms and conditions</span>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:16px;">
+          <button class="btn btn-ghost btn-large" onclick="vGoToStep2()" style="flex:1;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+          </button>
+          <button class="btn btn-primary btn-large" onclick="vSubmitRegistration()" style="flex:2;" id="vSubmitBtn">
+            Register My Business
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 4: Success -->
+      <div id="vFormSuccess" style="display:none; text-align:center; padding:20px 0;">
+        <div style="width:80px; height:80px; background:rgba(16,185,129,0.15); border:2px solid rgba(16,185,129,0.4); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:36px;">🏪</div>
+        <h2 style="font-family:var(--font-display); font-size:28px; font-weight:800; margin-bottom:12px;">Business Registered! 🎉</h2>
+        <p style="color:var(--text-secondary); margin-bottom:12px;">Your vendor account is under review. We'll activate it within 24-48 hours.</p>
+        <div style="background:rgba(124,58,237,0.08); border:1px solid rgba(124,58,237,0.2); border-radius:12px; padding:20px; margin:24px 0; text-align:left;">
+          <div style="font-size:13px; font-weight:700; color:var(--primary-light); margin-bottom:12px; text-transform:uppercase; letter-spacing:1px;">What Happens Next</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-secondary);">
+              <span style="width:24px; height:24px; background:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px;">1</span>
+              Our team will verify your business documents within 24-48 hours
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-secondary);">
+              <span style="width:24px; height:24px; background:var(--secondary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px;">2</span>
+              You'll receive your BioPay terminal device by courier
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-secondary);">
+              <span style="width:24px; height:24px; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px;">3</span>
+              Log into your vendor dashboard to monitor payments and analytics
+            </div>
+          </div>
+        </div>
+        <a href="dashboard-vendor.html" class="btn btn-primary btn-large w-full">Go to Vendor Dashboard</a>
+        <div class="form-footer" style="margin-top:16px;">
+          <a href="index.html">← Back to Homepage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .plan-option {
+      display: block;
+      cursor: pointer;
+    }
+    .plan-option input[type="radio"] {
+      display: none;
+    }
+    .plan-content {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.25s;
+    }
+    .plan-option input:checked + .plan-content {
+      border-color: var(--primary);
+      background: rgba(124, 58, 237, 0.1);
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+    }
+    .plan-option:hover .plan-content {
+      border-color: var(--border-hover);
+    }
+  </style>
+
+  <script src="js/register-vendor.js"></script>
+</body>
+</html>
